@@ -1,31 +1,14 @@
-<!-- ### Hi there 👋 -->
-
-<!--
-**muhammadghifar/muhammadghifar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
-
 # Hi, I'm Muhammad Ghifar 👋
 
 ### Entry-level full-stack developer passionate about coding and eager to grow in both frontend and backend technologies.
 
-- 👨‍💻 All of my projects are available at [my personal website](https://mghifarr.vercel.app/).
+- 👨‍💻 All of my projects are available at <a href="https://mghifarr.vercel.app/" target="_blank">my personal website</a>.
 
 <hr />
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://linkedin.com/in/muhammadghifarr" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="muhammadghifarr" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/muhammadghifarr" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="muhammadghifarr" height="30" width="40" /></a>
 </p>
 
 <hr />
