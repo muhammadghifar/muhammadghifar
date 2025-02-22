@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TheWelcome from '@/components/TheWelcome.vue'
+// import TheWelcome from '@/components/TheWelcome.vue'
 import HeroSection from '@/components/section/HeroSection.vue'
 import ExperienceSection from '@/components/section/ExperienceSection.vue'
 import ProjectSection from '@/components/section/ProjectSection.vue'
@@ -28,13 +28,15 @@ import ContactSection from '@/components/section/ContactSection.vue'
       <div id="projects">
         <div class="mb-4 text-center">
           <h2 class="text-center text-4xl font-semibold text-white mb-2">Latest Projects</h2>
-          <a
-            href="/projects"
-            class="underline cursor-pointer hover:text-primary transition-all duration-300"
-            >View all projects</a
-          >
         </div>
         <ProjectSection />
+        <div class="w-full text-center mt-4">
+          <a
+            href="/projects"
+            class="text-xl underline cursor-pointer hover:text-primary transition-all duration-300"
+            >View all projects >></a
+          >
+        </div>
       </div>
 
       <!-- Tech Stack -->

@@ -6,7 +6,26 @@ export const useProjectStore = defineStore('project', {
     return {
       projects: [
         {
+          id: 5,
+          title: 'Portfolio',
+          url: 'https://mghifarr.vercel.app',
+          description: 'My personal portfolio website.',
+          image: '/img/project/portfolio-page.png',
+          year: 2024,
+          stack: ['Vue JS', 'Typescript']
+        },
+        {
           id: 1,
+          title: 'Learnhub',
+          url: 'https://learnhub.id',
+          description: 'SaaS-based web app learning platform.',
+          image: '/img/project/learnhub-page.png',
+          year: 2024,
+          stack: ['React JS', 'Next JS', 'Typescript'],
+          isWorkRelated: true
+        },
+        {
+          id: 2,
           title: 'myDigiLearn',
           url: 'https://mydigilearn.id',
           description:
@@ -14,16 +33,6 @@ export const useProjectStore = defineStore('project', {
           image: '/img/project/mydigilearn-page.png',
           year: '2023 - 2024',
           stack: ['Vue JS', 'Nuxt JS'],
-          isWorkRelated: true
-        },
-        {
-          id: 2,
-          title: 'Learnhub',
-          url: 'https://learnhub.id',
-          description: 'SaaS-based web app learning platform.',
-          image: '/img/project/learnhub-page.png',
-          year: 2024,
-          stack: ['React JS', 'Next JS', 'Typescript'],
           isWorkRelated: true
         },
         {
@@ -45,15 +54,6 @@ export const useProjectStore = defineStore('project', {
           year: 2023,
           stack: ['Google Script', 'Javascript'],
           isWorkRelated: true
-        },
-        {
-          id: 5,
-          title: 'Portfolio',
-          url: 'https://mghifarr.vercel.app',
-          description: 'My personal portfolio website.',
-          image: '/img/project/portfolio-page.png',
-          year: 2024,
-          stack: ['Vue JS', 'Typescript']
         },
         {
           id: 6,

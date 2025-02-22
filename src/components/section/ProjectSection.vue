@@ -17,7 +17,6 @@ const { projects } = useProjectStore()
         :key="index"
         :title="item.title"
         :description="item.description"
-        :image="item.image"
         :stack="item.stack"
       />
     </div>
