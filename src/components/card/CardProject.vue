@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import CardBase from './CardBase.vue'
 import MiscBadge from '@/components/misc/MiscBadge.vue'
 
 interface CardProjectProps {
   title: string
   description: string
-  image?: string
+  image: string
   stack?: string[]
 }
 
@@ -16,7 +15,7 @@ const props = defineProps<CardProjectProps>()
 <template>
   <CardBase>
     <!-- Image -->
-    <img v-if="image" :src="props.image" alt="thumbnail" class="aspect-video object-cover rounded-t-lg" />
+    <img :src="props.image" alt="thumbnail" class="aspect-video object-cover rounded-t-lg" />
 
     <!-- Description -->
     <div class="mt-2 flex flex-col gap-2">
