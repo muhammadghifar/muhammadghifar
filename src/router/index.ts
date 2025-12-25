@@ -3,6 +3,7 @@ import HomeView from '@/views/HomeView.vue'
 import ProjectView from '@/views/ProjectView.vue'
 import AboutView from '@/views/AboutView.vue'
 import NotFoundView from '@/views/error/NotFoundView.vue'
+import NewVersion from '@/views/NewVersion.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,6 +25,11 @@ const router = createRouter({
       path: '/projects',
       name: 'projects',
       component: ProjectView
+    },
+    {
+      path: '/new',
+      name: 'new',
+      component: NewVersion
     },
     {
       path: '/:pathMatch(.*)*',
