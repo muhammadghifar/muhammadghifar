@@ -1,16 +1,20 @@
 <template>
-  <div class="w-full h-full">
-    <div class="grid grid-cols-2 content-center h-full">
+  <div class="w-full h-full p-12">
+    <div class="grid grid-cols-8 gap-4 content-center h-full">
       <!-- left side -->
-      <div class="p-4 border border-gray-300 m-2">
+      <div class="col-span-3 content-center p-4 borderborder-gray-300">
         <!-- photo -->
         <div class="">
-          <img src="/img/far.png" alt="profile photo" class="w-32 h-32 rounded-full mx-auto" />
+          <img src="/img/square.jpg" alt="profile photo" class="w-32 h-32 rounded-full mx-auto" />
         </div>
 
         <!-- name -->
-        <div class="">
-          <h1 class="text-2xl font-bold text-center mt-4">Muhammad Ghifar</h1>
+        <div class="text-center mx-20">
+          <h1 class="text-2xl text-white font-bold mt-4">Sfrsm Sfrsm Sfrsm Sfrsm Sfrsm</h1>
+          <p>
+            A programmer focused on web development with an interest in technology. Enjoy to
+            learning new things and aim to develop impactful applications.
+          </p>
         </div>
 
         <hr class="my-4 mx-20" />
@@ -47,28 +51,104 @@
             </a>
           </div>
         </div>
+
+        <!-- contact me -->
+        <div class="mt-4 w-full text-center flex flex-col gap-2 items-center">
+          <ButtonBase variant="primary" :icon="SvgEnvelope" icon-color="white" @click="sendMailTo">
+            Contact Me
+          </ButtonBase>
+        </div>
       </div>
 
       <!-- right side -->
-      <div class="p-4 border border-gray-300 m-2">
-        <p>New Version</p>
-
-        <AccordionBase>
-          <!-- <template #content-1>
-            <p>ini test</p>
-          </template> -->
+      <div class="col-span-5 pt-4 borderborder-gray-300 h-full overflow-auto">
+        <AccordionBase :items="accordionItems">
+          <template #content-1>
+            <ExperienceSection experince-type="work" />
+          </template>
+          <template #content-2>
+            <ExperienceSection experince-type="education" />
+          </template>
+          <template #content-3>
+            <ProjectSection />
+          </template>
         </AccordionBase>
       </div>
+    </div>
+
+    <div class="pt-2 pl-12">
+      <p class="text-zinc-100">© 2026 All rights reserved.</p>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import AccordionBase from '@/components/accordion/AccordionBase.vue';
+import AccordionBase, { type AccordionItem } from '@/components/accordion/AccordionBase.vue'
+import ButtonBase from '@/components/button/ButtonBase.vue'
+import ExperienceSection from '@/components/section/ExperienceSection.vue'
+import ProjectSection from '@/components/section/ProjectSection.vue'
+import SvgEnvelope from '@/components/svg/SvgEnvelope.vue'
 import SvgGithub from '@/components/svg/SvgGithub.vue'
 import SvgLinkedin from '@/components/svg/SvgLinkedin.vue'
 
-const resumeUrl = import.meta.env.VITE_RESUME_URL
+const resumeUrl: string = import.meta.env.VITE_RESUME_URL
+const mailtoUrl: string = import.meta.env.VITE_MAILTO_URL
+
+// Button action handlers - declared in the page, not in the component
+// const openCloudFiles = (): Window | null => {
+//   return window.open(resumeUrl, '_blank')
+// }
+
+const sendMailTo = (): void => {
+  window.location.href = mailtoUrl
+}
+
+const accordionItems: AccordionItem[] = [
+  {
+    title: 'Summary',
+    content:
+      'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum'
+  },
+  {
+    title: 'Experience'
+  },
+  {
+    title: 'Education'
+  },
+  {
+    title: 'Project'
+  }
+]
 </script>
 
-<style scoped></style>
+<style scoped>
+/* TODO : make it globally */
+/* macOS-style thin scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+</style>

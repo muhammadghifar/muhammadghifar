@@ -28,7 +28,7 @@ const props = defineProps<TimelineProps>()
         }"
       >
         <div
-          class="absolute w-3 h-3 rounded-full mt-1.5 border-gray-900 bg-primary"
+          class="absolute w-3 h-3 rounded-full mt-1.5 border-gray-900 bg-white"
           :class="{
             '-start-1.5': props.direction === 'left',
             '-end-1.5': props.direction === 'right'

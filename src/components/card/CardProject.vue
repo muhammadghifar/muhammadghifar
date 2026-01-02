@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import CardBase from './CardBase.vue'
 import MiscBadge from '@/components/misc/MiscBadge.vue'
 
@@ -16,7 +15,12 @@ const props = defineProps<CardProjectProps>()
 <template>
   <CardBase>
     <!-- Image -->
-    <img v-if="image" :src="props.image" alt="thumbnail" class="aspect-video object-cover rounded-t-lg" />
+    <img
+      v-if="image"
+      :src="props.image"
+      alt="thumbnail"
+      class="aspect-video object-cover rounded-t-lg"
+    />
 
     <!-- Description -->
     <div class="mt-2 flex flex-col gap-2">
@@ -24,10 +28,14 @@ const props = defineProps<CardProjectProps>()
         <MiscBadge v-for="(item, index) in props.stack" :key="index" :text="item" />
       </div>
 
-      <h3 class="text-2xl font-bold">{{ props.title }}</h3>
+      <h3 class="text-2xl font-bold text-white">{{ props.title }}</h3>
       <p class="line-clamp-3">
         {{ props.description }}
       </p>
+      
     </div>
+
+    <!-- Button show -->
+    <!-- <a href="" class="text-right underline hover:text-white transition-all duration-500">Show Detail</a> -->
   </CardBase>
 </template>

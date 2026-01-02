@@ -10,7 +10,7 @@ const closeModal = () => {
 
 <template>
   <div
-    class="fixed top-0 bottom-0 right-0 left-0 bg-[#00000080] flex justify-center items-center"
+    class="z-50 fixed top-0 bottom-0 right-0 left-0 bg-[#00000080] flex justify-center items-center"
     @click.self="closeModal"
   >
     <!-- Modal -->

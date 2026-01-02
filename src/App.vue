@@ -5,16 +5,16 @@ import PageFooter from '@/components/PageFooter.vue'
 </script>
 
 <template>
-  <header>
-    <!-- <PageHeader /> -->
-    <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
-  </header>
+  <!-- <header>
+    <PageHeader />
+    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  </header> -->
 
   <div class="h-screen">
     <RouterView />
   </div>
-<!-- 
-  <footer>
-    <PageFooter />
-  </footer> -->
+
+  <!-- <footer>
+      <PageFooter />
+    </footer> -->
 </template>

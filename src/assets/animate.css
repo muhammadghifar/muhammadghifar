@@ -1,0 +1,15 @@
+/* Modal slide and fade transition */
+.modal-slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.modal-slide-fade-leave-active {
+  transition: all 0.3s ease-in;
+}
+
+/* Overlay slide & fade effect */
+.modal-slide-fade-enter-from,
+.modal-slide-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-50px);
+}

@@ -14,7 +14,7 @@ export const useExperienceStore = defineStore('experience', {
           id: 1,
           title: 'PT Neuronworks Indonesia',
           description: 'Fullstack Developer',
-          time: 'December 2024 - now'
+          time: 'December 2024 - Present'
         },
         {
           id: 2,
@@ -40,7 +40,7 @@ export const useExperienceStore = defineStore('experience', {
           id: 1,
           title: 'Telkom University',
           description: 'Digital Creative Multimedia',
-          time: '2024 - now'
+          time: '2024 - Present'
         },
         {
           id: 2,
