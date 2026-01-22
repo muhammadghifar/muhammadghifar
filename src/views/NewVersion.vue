@@ -4,13 +4,18 @@
       <!-- left side -->
       <div class="col-span-3 content-center p-4 borderborder-gray-300">
         <!-- photo -->
-        <div class="">
-          <img src="/img/square.jpg" alt="profile photo" class="w-32 h-32 rounded-full mx-auto" />
+        <div class="relative flex items-center justify-center">
+          <div class="absolute w-64 h-64 bg-secondary rounded-full blur-xl animate-blob"></div>
+          <div
+            class="relative flex items-center justify-center w-64 h-64 bg-primary overflow-hidden animate-blob"
+          >
+            <img src="/img/far.png" alt="profile photo" class="h-64 w-64 object-cover" />
+          </div>
         </div>
 
         <!-- name -->
         <div class="text-center mx-20">
-          <h1 class="text-2xl text-white font-bold mt-4">Sfrsm Sfrsm Sfrsm Sfrsm Sfrsm</h1>
+          <h1 class="text-3xl text-white font-bold mt-4">Muhammad Ghifar Rijali</h1>
           <p>
             A programmer focused on web development with an interest in technology. Enjoy to
             learning new things and aim to develop impactful applications.
@@ -22,13 +27,6 @@
         <!-- socmed -->
         <div class="">
           <div class="flex flex-row gap-4 justify-center items-center">
-            <a
-              :href="resumeUrl"
-              target="_blank"
-              class="underline hover:text-white transition-all duration-500"
-            >
-              My Resume
-            </a>
             <a
               href="https://www.linkedin.com/in/muhammadghifarr/"
               target="_blank"
@@ -57,6 +55,15 @@
           <ButtonBase variant="primary" :icon="SvgEnvelope" icon-color="white" @click="sendMailTo">
             Contact Me
           </ButtonBase>
+          <div class="">
+            <a
+              :href="resumeUrl"
+              target="_blank"
+              class="underline hover:text-white transition-all duration-500"
+            >
+              &gt; My Resume
+            </a>
+          </div>
         </div>
       </div>
 
@@ -77,7 +84,7 @@
     </div>
 
     <div class="pt-2 pl-12">
-      <p class="text-zinc-100">© 2026 All rights reserved.</p>
+      <p class="text-zinc-100">© 2026 Muhammad Ghifar - All rights reserved. ✨</p>
     </div>
   </div>
 </template>
@@ -107,7 +114,7 @@ const accordionItems: AccordionItem[] = [
   {
     title: 'Summary',
     content:
-      'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum'
+      'I am a programmer focused on web development with an interest in technology. Enjoy to learning new things and aim to develop impactful applications. I hope to develop and participate in projects that bring value and make a genuine impact.'
   },
   {
     title: 'Experience'
@@ -122,33 +129,23 @@ const accordionItems: AccordionItem[] = [
 </script>
 
 <style scoped>
-/* TODO : make it globally */
-/* macOS-style thin scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+@keyframes blob {
+  0%,
+  100% {
+    border-radius: 46% 54% 31% 69% / 36% 33% 67% 64%;
+  }
+  25% {
+    border-radius: 50% 50% 32% 68% / 38% 44% 56% 62%;
+  }
+  50% {
+    border-radius: 36% 64% 50% 50% / 65% 58% 42% 35%;
+  }
+  75% {
+    border-radius: 32% 68% 54% 46% / 40% 40% 60% 60%;
+  }
 }
 
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-::-webkit-scrollbar-thumb:active {
-  background: rgba(255, 255, 255, 0.4);
-}
-
-/* Firefox scrollbar */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+.animate-blob {
+  animation: blob 15s infinite;
 }
 </style>

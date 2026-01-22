@@ -33,6 +33,7 @@ const closeModal = () => {
         :title="item.title"
         :description="item.description"
         :stack="item.stack"
+        :is-work-related="item.isWorkRelated"
         class="hover:cursor-pointer"
         @click="
           () => {

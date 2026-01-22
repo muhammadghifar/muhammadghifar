@@ -15,7 +15,7 @@ const props = defineProps<ProjectViewProps>()
     <ModalBase v-if="show">
       <template #header>
         <div class="px-6">
-          <h1 class="text-2xl font-bold !hover:text-dark">{{ props.data?.title }}</h1>
+          <h1 class="text-2xl font-bold !hover:text-dark text-white">{{ props.data?.title }}</h1>
           <p class="text-xs">{{ props.data?.isWorkRelated && '(Work-Related Project)' }}</p>
         </div>
       </template>
@@ -26,7 +26,7 @@ const props = defineProps<ProjectViewProps>()
             alt="content image"
             class="rounded-lg object-cover max-h-[400px] aspect-video"
           />
-          <p>{{ props.data?.description }}</p>
+          <p class="text-white">{{ props.data?.description }}</p>
           <hr />
           <div class="mt-2">
             <p v-if="props.data?.year">Time: {{ props.data?.year }}</p>

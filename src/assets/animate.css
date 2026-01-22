@@ -7,9 +7,41 @@
   transition: all 0.3s ease-in;
 }
 
-/* Overlay slide & fade effect */
+/* Modal overlay fade effect */
 .modal-slide-fade-enter-from,
 .modal-slide-fade-leave-to {
   opacity: 0;
   transform: translateY(-50px);
 }
+
+/* Modal content slide down + scale effect */
+/* .modal-slide-fade-enter-from > div,
+.modal-slide-fade-leave-to > div {
+  transform: translateY(-130px) scale(0.95);
+}
+
+.modal-slide-fade-enter-to > div,
+.modal-slide-fade-leave-from > div {
+  transform: translateY(0) scale(1);
+} */
+
+/* Accordion expand/collapse transition */
+.accordion-expand-enter-active,
+.accordion-expand-leave-active {
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.accordion-expand-enter-from,
+.accordion-expand-leave-to {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+}
+
+.accordion-expand-enter-to,
+.accordion-expand-leave-from {
+  max-height: 1000px;
+  opacity: 1;
+}
+
