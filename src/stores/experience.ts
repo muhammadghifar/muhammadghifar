@@ -12,6 +12,12 @@ export const useExperienceStore = defineStore('experience', {
       experiences: [
         {
           id: 1,
+          title: 'PT Neuronworks Indonesia',
+          description: 'Fullstack Developer',
+          time: 'December 2024 - Present'
+        },
+        {
+          id: 2,
           title: 'PT Motiolabs Digital Indonesia',
           description: 'Frontend Developer',
           time: 'July 2023 - July 2024'
@@ -33,7 +39,13 @@ export const useExperienceStore = defineStore('experience', {
         {
           id: 1,
           title: 'Telkom University',
-          description: 'Associate Degree in Computer Engineering Technology',
+          description: 'Digital Creative Multimedia',
+          time: '2024 - Present'
+        },
+        {
+          id: 2,
+          title: 'Telkom University',
+          description: 'Computer Engineering Technology',
           time: '2020 - 2023'
         },
         {

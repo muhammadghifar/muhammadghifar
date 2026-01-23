@@ -4,6 +4,11 @@ import MiscSwitch from '@/components/misc/MiscSwitch.vue'
 import { useCoreStore, useExperienceStore } from '@/stores'
 import { storeToRefs } from 'pinia'
 
+interface ExperienceSectionProps {
+  experinceType: 'work' | 'education'
+}
+
+const props = defineProps<ExperienceSectionProps>()
 const { getExperiences, getEducation, activeStatus } = storeToRefs(useExperienceStore())
 const { getIsMobile, getIsTablet, getIsDesktop } = storeToRefs(useCoreStore())
 </script>
@@ -17,27 +22,18 @@ const { getIsMobile, getIsTablet, getIsDesktop } = storeToRefs(useCoreStore())
       <MiscTimeline
         class="transition-all duration-500 ease-in-out"
         direction="left"
-        :items="activeStatus === 'work' ? getExperiences : getEducation"
+        :items="props.experinceType === 'work' ? getExperiences : getEducation"
       />
     </div>
   </div>
 
-  <div class="hidden md:grid md:grid-cols-2 gap-8 max-w-[1000px] mx-auto">
+  <div class="max-w-[1000px] mx-2">
     <div class="flex flex-col gap-6">
-      <h3 class="text-3xl font-medium">Work Experience</h3>
+      <!-- <h3 class="text-3xl font-medium">Work Experience</h3> -->
       <MiscTimeline
         direction="left"
         class="transition-all duration-500 ease-in-out"
-        :items="getExperiences"
-      />
-    </div>
-
-    <div class="flex flex-col gap-6">
-      <h3 class="text-3xl font-medium text-end">Education</h3>
-      <MiscTimeline
-        direction="right"
-        class="transition-all duration-500 ease-in-out"
-        :items="getEducation"
+        :items="props.experinceType === 'work' ? getExperiences : getEducation"
       />
     </div>
   </div>

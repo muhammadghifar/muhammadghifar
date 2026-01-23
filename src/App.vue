@@ -7,13 +7,14 @@ import PageFooter from '@/components/PageFooter.vue'
 <template>
   <!-- <header>
     <PageHeader />
+    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
   </header> -->
 
-  <div class="max-w-[1600px] mx-auto">
+  <div class="h-screen">
     <RouterView />
   </div>
-  <!-- 
-  <footer>
-    <PageFooter />
-  </footer> -->
+
+  <!-- <footer>
+      <PageFooter />
+    </footer> -->
 </template>
