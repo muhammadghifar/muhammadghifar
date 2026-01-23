@@ -5,7 +5,7 @@ import MiscBadge from '@/components/misc/MiscBadge.vue'
 interface CardProjectProps {
   title: string
   description: string
-  image?: string
+  image: string
   stack?: string[]
   isWorkRelated?: boolean
 }

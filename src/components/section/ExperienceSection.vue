@@ -10,7 +10,7 @@ interface ExperienceSectionProps {
 
 const props = defineProps<ExperienceSectionProps>()
 const { getExperiences, getEducation, activeStatus } = storeToRefs(useExperienceStore())
-// const { getIsMobile, getIsTablet, getIsDesktop } = storeToRefs(useCoreStore())
+const { getIsMobile, getIsTablet, getIsDesktop } = storeToRefs(useCoreStore())
 </script>
 
 <template>

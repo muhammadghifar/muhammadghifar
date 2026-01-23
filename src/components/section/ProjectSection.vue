@@ -32,6 +32,7 @@ const closeModal = () => {
         :key="index"
         :title="item.title"
         :description="item.description"
+        :image="item.image"
         :stack="item.stack"
         :is-work-related="item.isWorkRelated"
         class="hover:cursor-pointer"
