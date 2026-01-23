@@ -19,7 +19,7 @@ import ContactSection from '@/components/section/ContactSection.vue'
       <!-- Experience -->
       <div id="experience">
         <h2 class="text-center text-4xl font-semibold mb-8 text-white">Experience</h2>
-        <ExperienceSection />
+        <!-- <ExperienceSection /> -->
       </div>
 
       <!-- Timeline -->
