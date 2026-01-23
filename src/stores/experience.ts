@@ -1,10 +1,10 @@
 import { defineStore } from 'pinia'
-// import type { Experience } from '@/types'
+import type { Experience } from '@/types'
 
-// interface ExperienceStatus {
-//   status: 'work' | 'education'
-//     status: boolean
-// }
+interface ExperienceStatus {
+  status: 'work' | 'education'
+  //   status: boolean
+}
 
 export const useExperienceStore = defineStore('experience', {
   state: () => {
@@ -14,7 +14,7 @@ export const useExperienceStore = defineStore('experience', {
           id: 1,
           title: 'PT Neuronworks Indonesia',
           description: 'Fullstack Developer',
-          time: 'December 2024 - now'
+          time: 'December 2024 - Present'
         },
         {
           id: 2,
@@ -23,13 +23,13 @@ export const useExperienceStore = defineStore('experience', {
           time: 'July 2023 - July 2024'
         },
         {
-          id: 3,
+          id: 2,
           title: 'PT Neuronworks Indonesia',
           description: 'Technical Support Intern',
           time: 'July 2022 - June 2023'
         },
         {
-          id: 4,
+          id: 3,
           title: 'Dinas Pekerjaan Umum',
           description: 'IT Support Intern',
           time: 'July 2019 - September 2019'
@@ -40,7 +40,7 @@ export const useExperienceStore = defineStore('experience', {
           id: 1,
           title: 'Telkom University',
           description: 'Digital Creative Multimedia',
-          time: '2024 - now'
+          time: '2024 - Present'
         },
         {
           id: 2,
@@ -49,7 +49,7 @@ export const useExperienceStore = defineStore('experience', {
           time: '2020 - 2023'
         },
         {
-          id: 3,
+          id: 2,
           title: 'SMKN 13 Bandung',
           description: 'Computer Engineering',
           time: '2017 - 2020'

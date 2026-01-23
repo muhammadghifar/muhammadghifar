@@ -10,19 +10,19 @@ const closeModal = () => {
 
 <template>
   <div
-    class="fixed top-0 bottom-0 right-0 left-0 bg-[#00000080] flex justify-center items-center"
+    class="z-50 fixed top-0 bottom-0 right-0 left-0 bg-[#00000080] flex justify-center items-center"
     @click.self="closeModal"
   >
     <!-- Modal -->
     <div
-      class="flex flex-col gap-2 w-full max-w-[900px] max-h-[700px] p-4 mx-8 lg:mx-20 bg-dark shadow-xl rounded-lg border border-secondary"
+      class="relative flex flex-col gap-2 w-full max-w-[900px] max-h-[700px] p-4 mx-8 lg:mx-20 bg-dark shadow-xl rounded-lg border border-secondary"
     >
       <!-- header -->
       <div>
         <!-- Close button -->
-        <div class="absolute">
+        <div class="absolute -right-6 -top-6">
           <button
-            class="relative -left-9 -top-9 bg-white rounded-full p-2 cursor-pointer text-dark font-black"
+            class="bg-white rounded-full p-2 cursor-pointer text-dark font-black"
             @click="closeModal"
           >
             <SvgCross />
